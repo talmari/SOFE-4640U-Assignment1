@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!--text box to accept principal amount-->
+        <EditText
+            android:id="@+id/principalEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Please enter the principal amount"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--text box to accept amortization period -->
+        <EditText
+            android:id="@+id/AmortizationEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Please enter your amortization period"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/principalEditText"
+            android:layout_marginTop="8dp" />
+
+        <!--text box to accept interest rate-->
+        <EditText
+            android:id="@+id/interestEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Please enter your interest rate"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AmortizationEditText"
+            android:layout_marginTop="8dp" />
+
+        <!-- button to calculate monthly payments -->
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestEditText"
+            android:layout_marginTop="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
